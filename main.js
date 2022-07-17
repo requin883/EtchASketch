@@ -1,12 +1,17 @@
-const btn = document.querySelector(".btn");
+let starter;
+const startBtn = document.querySelector(".btn-table");
+const resetBtn = document.querySelector(".reset");
 const container = document.querySelector(".container");
-createTable();
 const newbtns = document.querySelectorAll(".table");
+startBtn.addEventListener('click',createTable);
+
 function createTable(){
+    if (starter==undefined){
     container.style.display = "grid";
-    container.style.gridTemplateColumns= "repeat(16,1fr)";
+    container.style.gridTemplateColumns= `repeat(16,1fr)`;
     container.style.gridTemplateRows = "repeat(16,1fr)";
     container.style.gap = 0;
+    }
 for (let i=0;i<16;i++){
     for(let j=0;j<16;j++){
         let newNode = document.createElement("div");
