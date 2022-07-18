@@ -8,18 +8,28 @@
     height:20px;
     /* border:2px solid black; */
 }
-
+.container{
+    overflow:hidden;
+    border-radius: 10px;
+    border:1px solid black;
+}
 .btn-container{
     display:flex;
     align-items: flex-end;
+    justify-content: center;
+}
+.newcontainer{
+    display:flex;
+    align-items:center;
     justify-content: center;
 }
 input{
     align-self:center;
 }
 .btn{
-    margin: 1em;
+    margin:1em;
     padding: 1em;
+    margin-bottom:2em;
     border-radius: 10px;
     border: none;
 }
