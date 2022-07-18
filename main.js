@@ -1,7 +1,7 @@
 let starter = 16;
 const startBtn = document.querySelector(".btn-table");
 const container = document.querySelector(".container");
-
+const reset = document.querySelector(".reset");
 startBtn.addEventListener('click',createTable);
 
 function createTable(){
@@ -25,8 +25,11 @@ function createTable(){
     newbtns.forEach(button=>button.addEventListener('mouseover',(e)=>{
         e.target.style.backgroundColor="#C2C1C2";
     }));
-
+    reset.addEventListener('click',()=>{
+        newbtns.forEach(button=>button.style.backgroundColor = container.style.backgroundColor);
+    })
 }
+
 
 
 
