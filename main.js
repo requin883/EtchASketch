@@ -1,7 +1,7 @@
 let starter = 16;
 const startBtn = document.querySelector(".btn-table");
 const container = document.querySelector(".container");
-container.style.display = "grid";
+
 startBtn.addEventListener('click',createTable);
 
 function createTable(){
@@ -10,19 +10,20 @@ function createTable(){
         newValue = prompt("Please input a number between 1-100");
     }
     container.innerHTML = "";
-    container.style.gridTemplate= `repeat(${newValue},max-content) / repeat(${newValue},max-content)`;
-    container.style.gap = 0;
+    container.style.gridTemplate= `repeat(${newValue},minmax(1px,1fr)) / repeat(${newValue},minmax(1px,1fr))`;
     for (let i=0;i<newValue;i++){
         for(let j=0;j<newValue;j++){
             let newNode = document.createElement("div");
             newNode.classList.add("table");
+            newNode.style.justifySelf = "stretch";
+            newNode.style.alignSelf = "stretch";
             container.appendChild(newNode);
             newNode.id = `${i}-${j}`;
         }
         }
     const newbtns = document.querySelectorAll(".table");
     newbtns.forEach(button=>button.addEventListener('mouseover',(e)=>{
-        e.target.style.backgroundColor="red";
+        e.target.style.backgroundColor="#C2C1C2";
     }));
 
 }
