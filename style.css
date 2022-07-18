@@ -3,12 +3,19 @@
     padding:0;
     box-sizing: border-box;
 }
-.table{
-    width:70px;
-    height:20px;
-    /* border:2px solid black; */
+body{
+    background-color:#BD4089;
+}
+h1{
+    text-align: center;
+    font-size:5em;
+    text-decoration: underline;
 }
 .container{
+    display: grid;
+    width:960px;
+    height:480px;
+    background-color: #42213D;
     overflow:hidden;
     border-radius: 10px;
     border:1px solid black;
@@ -27,9 +34,12 @@ input{
     align-self:center;
 }
 .btn{
+    color:white;
+    background-color: #683257;
     margin:1em;
     padding: 1em;
     margin-bottom:2em;
-    border-radius: 10px;
     border: none;
+    border-radius: 10px;
+    
 }
